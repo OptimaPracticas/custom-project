@@ -13,3 +13,7 @@ Jenkins debería ejecutar `npm install` y cualquiera de los tasks de prueba defi
 * Pruebas sobre archivos js
 * Pruebas con escritura de archivos
 * Pruebas de deploy
+
+## Documentación
+
+[Cosas guapas de Jenkins](https://github.com/kitconcept/jenkins-pipeline-examples/blob/master/README.rst)
