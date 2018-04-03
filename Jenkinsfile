@@ -21,7 +21,7 @@
       //bat 'npm install -g grunt-cli'
       //bat 'rmdir /S /Q node_modules mobile'
       bat 'npm install'
-      bat 'node node_modules\\grunt-cli\\bin\\grunt build'
+      bat 'node node_modules\\grunt\\bin\\grunt build' //TODO
     }
   }
 

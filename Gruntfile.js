@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 		// TODO Plugin de copy
 		copy: {
 			// Copia una de las carpetas de pruebas-copia
-			copia: {
+			partial: {
 				files: [{
 					expand: true,
 					src: ['pruebas-copia/pruebas1/*'],
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 				}]
 			},
 			// Copia todas las carpetas de pruebas-copia
-			copiaTodo: {
+			build: {
 				files: [{
 					expand: true,
 					//src: ['**/*', '!**/.git/**', '!**/.git*'],
@@ -55,8 +55,8 @@ module.exports = function(grunt) {
 
 		// TODO PLugin de clean
 		clean: {
-			pruebas: ['pruebas/*'],
-			full: ['**/*']
+			build: ['pruebas'],
+			partial: ['pruebas/*/prueba1']
 		},
 
 		// TODO Plugin de watch
@@ -81,10 +81,12 @@ module.exports = function(grunt) {
 
 /* ---------------------------------------- TASKS ---------------------------------------- */
 
-	grunt.registerTask('clean', 'clean:pruebas');
-	grunt.registerTask('buildOne', ['clean:pruebas', 'copy:copia']);
-	grunt.registerTask('build', ['clean:pruebas', 'copy:copiaTodo']);
+
 	grunt.registerTask('changeVersion', 'update_json');
+	grunt.registerTask('clean', ['clean:build']);
+	grunt.registerTask('clean-partial', ['clean:partial']);
+	grunt.registerTask('build-partial', ['clean:build', 'copy:partial']);
+	grunt.registerTask('build', ['clean:build', 'copy:build']);
 
 	/*
 	//this task cleans the mobile folder and installs the development version of drupal, modules, themes and default folder with the configuration
