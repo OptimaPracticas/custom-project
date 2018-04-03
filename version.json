@@ -1,5 +1,5 @@
 {
-    "release": "v1.10.3",
+    "release": "v1.10.5",
     "build": "1",
     "submodulesApp": [{
             "name": "custom-modules",

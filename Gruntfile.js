@@ -81,9 +81,10 @@ module.exports = function(grunt) {
 
 /* ---------------------------------------- TASKS ---------------------------------------- */
 
-	grunt.registerTask('clean', 'clean:pruebas')
+	grunt.registerTask('clean', 'clean:pruebas');
 	grunt.registerTask('buildOne', ['clean:pruebas', 'copy:copia']);
 	grunt.registerTask('build', ['clean:pruebas', 'copy:copiaTodo']);
+	grunt.registerTask('changeVersion', 'update_json');
 
 	/*
 	//this task cleans the mobile folder and installs the development version of drupal, modules, themes and default folder with the configuration
