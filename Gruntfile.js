@@ -81,8 +81,8 @@ module.exports = function(grunt) {
 
 /* ---------------------------------------- TASKS ---------------------------------------- */
 
-	grunt.registerTask('clean', ['clean:build']);
-	grunt.registerTask('clean-partial', ['clean:partial']);
+	grunt.registerTask('rmv', ['clean:build']);
+	grunt.registerTask('rmv-partial', ['clean:partial']);
 	grunt.registerTask('build-partial', ['clean:build', 'copy:partial']);
 	grunt.registerTask('build', ['clean:build', 'copy:build']);
 
